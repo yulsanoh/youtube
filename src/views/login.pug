@@ -1,4 +1,10 @@
 extends layout.pug
 
 block content
-  h2 this is login page
+  form(method="POST")
+    .input-wrap
+      input(type="text", id="account", required, value="")
+      label(for="account") 계정을 입력하세요
+    .input-wrap 
+      input(type="text", id="password", required, value="")
+      label(for="password") 비밀번호를 입력하세요 

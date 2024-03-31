@@ -1,0 +1,37 @@
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap input {
+  height: 24px;
+  width: 240px;
+  border: 1px solid #777;
+}
+
+.input-wrap input:focus {
+  outline: none;
+  border: 1px solid #1a73e8;
+}
+
+.input-wrap label {
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  transition: 0.3s;
+  color: #777;
+  /* border: 2px solid #fff; */
+  pointer-events: none;
+}
+
+.input-wrap input:focus ~ label,
+.input-wrap input:valid ~ label,
+.input-wrap input:not([value=""]) ~ label {
+  font-size: 12px;
+  top: -10px;
+  color: #1a73e8;
+  background-color: #fff;
+}
+
+.input-wrap input:not([value=""]) ~ label {
+  color: greenyellow;
+}
