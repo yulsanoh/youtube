@@ -2,9 +2,7 @@ doctype html
 html 
   head 
     include partials/title.pug
-    //- link(rel="stylesheet", href="https://unpkg.com/mvp.css")
-    link(rel="stylesheet", href="http://localhost:4000/static/css/reset.css")
-    link(rel="stylesheet", href="http://localhost:4000/static/css/style.css")
+    link(rel="stylesheet", href="/static/css/styles.css")
   body 
     header
       nav 
@@ -17,3 +15,4 @@ html
             a(href="/signup") 회원가입
     main
       block content
+    script(src="/static/js/main.js")

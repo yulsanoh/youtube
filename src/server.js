@@ -9,13 +9,11 @@ const PORT = 4000;
 
 app.set("views", __dirname + "/views");
 app.set("view engine", "pug");
-app.use("/static", express.static(__dirname + "/client"));
+app.use("/static", express.static("assets"));
 app.use("/", rootRouter);
 app.use("/users/", userRouter);
 app.use("/videos/", videoRouter);
 console.log(__dirname);
-app.listen(PORT, () =>
-  console.log(`✅ Server is listening on port http://localhost:${PORT}`)
-);
+app.listen(PORT, () => console.log(`✅ Server is listening on port http://localhost:${PORT}`));
 
 export default app;

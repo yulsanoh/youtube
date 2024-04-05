@@ -1,0 +1,38 @@
+.input-wrap {
+  position: relative;
+  font-size: 16px;
+  input {
+    margin-bottom: 12px;
+    padding: 16px;
+    width: 360px;
+    border: 1px solid black;
+    border-radius: 4px;
+
+    &:not([value=""]) {
+      background-color: skyblue;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid #0b57d0;
+    }
+
+    &:focus ~ label {
+      top: -8px;
+      left: 10px;
+      font-size: 12px;
+      color: #0b57d0;
+      background-color: white;
+      padding: 0px 4px;
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    color: #777;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+}
